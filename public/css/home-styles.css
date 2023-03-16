@@ -1,0 +1,42 @@
+
+.category-isekai{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.container-anime{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.container-anime .resumen{
+    margin-top: -5px;
+   
+}
+
+.imagen-anime > img{
+    width: 100px;
+    border: solid 2px red;
+}
+
+.resumen{
+    background-color: red;
+    width: 100%;
+    text-align: center;
+
+}
+
+.boton-ver-mas{
+    background-color: blueviolet;
+    width: 100%;
+    text-align: center;
+
+
+}

@@ -1,67 +1,121 @@
 <%- include('partials/head.ejs') %>
-<body>
 
-    <!--Header - menu-->
-    <header>
+    <body>
 
-        <div class="header-content">
+        <!--Header - menu-->
+        <header>
 
-            <div class="logo">
-                <h1>Anime<b>Proyecto</b></h1>
+            <div class="header-content">
+
+                <div class="logo">
+                    <h1>Anime<b>Proyecto</b></h1>
+                </div>
+
+                <div class="menu" id="show-menu">
+
+                    <nav>
+                        <ul>
+                            <li><a href="#"> <i class="fas fa-home"></i> Inicio</a></li>
+                            <li><a href="#"> <i class="fab fa-youtube"> </i>Manga</a></li>
+                            <li><a href="#"> <i class="fas fa-headset"></i>Artistas Independientes</a></li>
+                            <li><a href="#"> <i class="fas fa-headset"></i> Contacto</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div id="ctn-icon-search">
+                    <i class="fas fa-search" id="icon-search"></i>
+                </div>
+
             </div>
 
-            <div class="menu" id="show-menu">
-
-                <nav>
-                    <ul>
-                        <li><a href="#"> <i class="fas fa-home"></i> Inicio</a></li>
-                        <li><a href="#"> <i class="fab fa-youtube"> </i>Manga</a></li>
-                        <li><a href="#"> <i class="fas fa-headset"></i>Artistas Independientes</a></li>
-                        <li><a href="#"> <i class="fas fa-headset"></i> Contacto</a></li>
-                    </ul>
-                </nav>
-
+            <div id="icon-menu">
+                <i class="fas fa-bars"></i>
             </div>
 
-            <div id="ctn-icon-search">
-                <i class="fas fa-search" id="icon-search"></i>
+        </header>
+
+
+        <div id="ctn-bars-search">
+            <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+        </div>
+
+
+
+        <div id="cover-ctn-search"></div>
+
+
+        <!--Portada-->
+
+        <div class="container-all" id="move-content">
+
+
+            <div class="blog-container-cover">
+                <div class="container-info-cover">
+                    <h1>¡Encuentra tu Anime favorito!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aliquam quis fuga beatae blanditiis
+                        assumenda.</p>
+                </div>
             </div>
+
 
         </div>
 
-        <div id="icon-menu">
-            <i class="fas fa-bars"></i>
-        </div>
 
-    </header>
+        <main>
+            <section class="category-isekai">
+
+                <% animes.forEach((name)=> { %>
+
+                    <div class="container-anime">
+                        <h2>isekai</h2>
+                        <div class="imagen-anime">
+                            <img src="/image/<%= name.imagen %>" alt="">
+                        </div>
+
+                        <div class="resumen">
+                            <p>
+                                <%= name.resumen %>>
+                            </p>
+                        </div>
+
+                        <div class="boton-ver-mas">
+                            <a href="">Ver mas</a>
+                        </div>
+                    </div>
+
+                    <% }) %>
+
+            </section>
+
+            <section class="category-isekai">
+
+                <% animes.forEach((name)=> { %>
+
+                    <div class="container-anime">
+                        <h2>isekai</h2>
+                        <div class="imagen-anime">
+                            <img src="/image/<%= name.imagen %>" alt="">
+                        </div>
+
+                        <div class="resumen">
+                            <p>
+                                <%= name.resumen %>>
+                            </p>
+                        </div>
+
+                        <div class="boton-ver-mas">
+                            <a href="">Ver mas</a>
+                        </div>
+                    </div>
+
+                    <% }) %>
+                    
+            </section>
 
 
-    <div id="ctn-bars-search">
-        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
-    </div>
+        </main>
 
-    
-
-    <div id="cover-ctn-search"></div>
-
-
-    <!--Portada-->
-
-    <div class="container-all" id="move-content">
-
-    
-    <div class="blog-container-cover">
-        <div class="container-info-cover">
-            <h1>¡Encuentra tu Anime favorito!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aliquam quis fuga beatae blanditiis assumenda.</p>
-        </div>
-    </div>
-
-
-    </div>
-
-
-    <!--Footer-->
-    <%- include('partials/footer.ejs') %>
-
-        
+        <!--Footer-->
+        <%- include('partials/footer.ejs') %>
