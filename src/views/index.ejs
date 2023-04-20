@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <%- include('partials/head.ejs') %>
 
     <body>
@@ -69,7 +71,7 @@
                 <% animes.forEach((name)=> { %>
 
                     <div class="container-anime">
-                        <h2>isekai</h2>
+                        <h2><%= name.name %></h2>
                         <div class="imagen-anime">
                             <img src="/image/<%= name.imagen %>" alt="">
                         </div>
@@ -94,7 +96,7 @@
                 <% animes.forEach((name)=> { %>
 
                     <div class="container-anime">
-                        <h2>isekai</h2>
+                        <h2><%= name.name %></h2>
                         <div class="imagen-anime">
                             <img src="/image/<%= name.imagen %>" alt="">
                         </div>
@@ -119,3 +121,7 @@
 
         <!--Footer-->
         <%- include('partials/footer.ejs') %>
+        <script src="js/script.js"></script>
+    </body>
+
+    </html>

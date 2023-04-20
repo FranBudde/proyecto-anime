@@ -6,5 +6,11 @@
   "genre": "isekai",
   "ranking": 4.6,
   "imagen": "naruto.jpg"
+ },
+ {
+  "id": 2,
+  "name": "fanta",
+  "description": "asasasasas",
+  "genre": "isekai"
  }
 ]

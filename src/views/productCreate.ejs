@@ -1,64 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
 <%- include('partials/head.ejs') %>
 
     <body>
-
-        <!--Header - menu-->
+        <!--Inicio del header-->
         <%- include('partials/header.ejs') %>
-
+            <!--Fin del header-->
             <!--Search-->
             <%- include('partials/search.ejs') %>
-            <div class="container-all" id="move-content">
+                <div class="container-all" id="move-content">
 
 
-                <div class="blog-container-cover">
-                    <div class="container-info-cover"> 
-                        <h1>¡Crea tu Anime favorito!</h1>   
+                    <div class="blog-container-cover">
+                        <div class="container-info-cover">
+                            <h1>¡Crea tu Anime favorito!</h1>
+                        </div>
                     </div>
+
+
                 </div>
-    
-    
-            </div>
-
-
-                <!--form Create-->
-
-                <main id="main-create" >
-                    <div id="formCreateAnime">
-                        <form action="/create" method="post" enctype="multipart/form-data">
-                            <div class="form-input">
-                                <label for="name">Nombre del anime</label>
-                                <input type="text" name="name">
-                            </div>
-    
-                            <div class="form-input">
-                                <label for="description">Descripción del anime</label>
-                                <textarea name="description"  cols="20" rows="5"></textarea>
-                            </div>
-    
-                            <div class="form-input">
-                                <label for="genre">Elige el genero del anime</label>
-                                <select name="genre">
-                                    <option value="">Elige el genero</option>
-                                    <option value="">Acción</option>
-                                    <option value="">Isekai</option>
-                                    <option value="">Terror</option>
-                                </select>
-                            </div>
-                            <div class="form-input">
-                                <label for="imageAnime">Sube una foto de tu anime</label>
-                                <input type="file" name="imageAnime">
-                            </div>
-
-                            <button type="submit">Crear</button>
-                        </form>
-                    </div>
-                </main>
-
-
+                <!--fin del Search-->
+                <div id="form-container">
+                    <form action="/create" method="post">
+                        <div class="ctn-input">
+                            <label for="name">Nombre del anime</label>
+                            <input type="text" name="name" >
+                        </div>
+                        <div class="ctn-input">
+                            <label for="description">Reseña</label>
+                            <textarea name="description" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="ctn-input">
+                            <label for="genre"></label>
+                            <select name="genre" >
+                                <option value="">Indica un genero</option>
+                                <option value="isekai">Isekai</option>
+                                <option value="accion">Acción</option>
+                                <option value="terror">Terror</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit">Crear</button>
+                    </form>
+                </div>
                 <!--Footer-->
                 <%- include('partials/footer.ejs') %>
+                <!--Fin del footer-->
 
                     <script src="js/script.js"></script>
     </body>
 
-    </html>
+</html>
