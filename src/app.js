@@ -3,6 +3,8 @@ const path = require('path');
 
 const mainRouter = require('./routers/main');
 const userRouter = require('./routers/user');
+const apiMain = require('./routers/api/apiMain');
+const apiUser = require('./routers/api/apiUser');
 
 const app = express();
 
@@ -14,6 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', mainRouter);
 app.use('/user', userRouter);
+app.use('/api', apiMain);
+app.use('/api', apiUser);
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
