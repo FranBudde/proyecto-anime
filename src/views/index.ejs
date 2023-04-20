@@ -90,28 +90,14 @@
             </section>
 
             <section class="category-isekai">
-
-                <% animes.forEach((name)=> { %>
-
-                    <div class="container-anime">
-                        <h2>isekai</h2>
-                        <div class="imagen-anime">
-                            <img src="/image/<%= name.imagen %>" alt="">
-                        </div>
-
-                        <div class="resumen">
-                            <p>
-                                <%= name.resumen %>>
-                            </p>
-                        </div>
-
-                        <div class="boton-ver-mas">
-                            <a href="">Ver mas</a>
-                        </div>
-                    </div>
+            <ul>
+                <% animes.forEach((anime)=> { %>
+                    <li>
+                        <h4><%= anime.atributtes %></h4>
+                    </li>
 
                     <% }) %>
-                    
+            </ul>
             </section>
 
 
