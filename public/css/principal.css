@@ -38,6 +38,9 @@ header{
     justify-content: center;
     align-items: center;
 }
+ .logo h1{
+    font-size: 27px;
+}
 
 .logo h1 b{
     color: #ea2525;
@@ -285,6 +288,8 @@ footer .redes-footer .fa-instagram:hover{
         max-width: 1000px;
         padding: 0 20px;
     }
+
+ 
 
     #ctn-bars-search,
     #ctn-bars-search input,
