@@ -1,23 +1,27 @@
 const express = require ('express');
 const path = require('path');
-
-const mainRouter = require('./routers/main');
-const userRouter = require('./routers/user');
-const apiMain = require('./routers/api/apiMain');
-const apiUser = require('./routers/api/apiUser');
+const methodOverride = require('method-override');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname,'../public')));
+const mainRouter = require('./routers/main');
+const userRouter = require('./routers/user');
+
+
+
+app.use(express.static(path.resolve(__dirname,'../public')));
+app.use(express.urlencoded({ extended : false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.resolve(__dirname, './views'));
+
 
 
 app.use('/', mainRouter);
 app.use('/user', userRouter);
-app.use('/api', apiMain);
-app.use('/api', apiUser);
+
 
 
 const port = process.env.PORT || 3000;

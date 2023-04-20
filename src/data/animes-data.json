@@ -1,8 +1,10 @@
 [
-    {"id":1, "name":"naruto", "resumen":"Resumne", "generos":["isekai"], "ranking": 4.6, "imagen":"naruto.jpg"},
-    {"id":1, "name":"naruto", "resumen":"Resumne", "generos":["isekai"], "ranking": 4.6, "imagen":"naruto.jpg"},
-    {"id":1, "name":"naruto", "resumen":"Resumne", "generos":["isekai"], "ranking": 4.6, "imagen":"naruto.jpg"},
-    {"id":1, "name":"naruto", "resumen":"Resumne", "generos":["isekai"], "ranking": 4.6, "imagen":"naruto.jpg"},
-    {"id":1, "name":"naruto", "resumen":"Resumne", "generos":["isekai"], "ranking": 4.6, "imagen":"naruto.jpg"}
-
+ {
+  "id": 1,
+  "name": "naruto",
+  "description": "Resumne",
+  "genre": "isekai",
+  "ranking": 4.6,
+  "imagen": "naruto.jpg"
+ }
 ]
